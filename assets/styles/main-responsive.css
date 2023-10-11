@@ -1,0 +1,43 @@
+@media screen and (max-width: 1024px) {
+  .hero {
+    margin-top: 10%;
+  }
+  .hero1 {
+    padding-left: 2rem;
+  }
+  .hero1 h1 {
+    font-size: 4rem;
+  }
+  .hero1 p {
+    font-size: 2rem;
+  }
+  .hero1 button {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-sm {
+    display: flex;
+  }
+  .right {
+    display: none;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .hero1 {
+    max-width: 100%;
+  }
+  .hero__image {
+    width: 100vw;
+    margin-right: -120px;
+    padding-left: 30px;
+  }
+  .journey-input {
+    max-width: 90%;
+  }
+  .ride-option {
+    width: 90%;
+  }
+}

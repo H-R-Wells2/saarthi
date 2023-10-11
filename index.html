@@ -3,46 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="main-responsive.css" />
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/assets/styles/main-responsive.css" />
     <script
       src="https://kit.fontawesome.com/b3348ae33f.js"
       crossorigin="anonymous"
     ></script>
+
     <title>Saarthi</title>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <div class="left">
-        <a href="#">Home</a>
-      </div>
-      <div class="right" id="menu">
-        <a href="#">Blog</a>
-        <a href="#">Ride Options</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
-      </div>
-      <div class="user-icon">
-        <i class="fa-solid fa-user"></i>
+      <div>
+        <div class="left">
+          <a href="#" style="font-size: 2rem;">Saarthi</a>
+        </div>
+        <div class="right" id="menu">
+          <a href="#journey-planner">Journey Planner</a>
+          <a href="#ride-choices">Ride Options</a>
+          <a href="#blog">Blog</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+        <div class="user-icon">
+          <i class="fa-solid fa-user"></i>
+        </div>
       </div>
     </nav>
 
     <!-- Navbar for mobile -->
     <nav class="navbar-sm">
       <div>
-        <a href="#"><i class="fa-solid fa-blog"></i>Blog</a>
-        <a href="#"><i class="fa-solid fa-car"></i>Ride</a>
-        <a href="#"><i class="fa-solid fa-user-group"></i>About</a>
-        <a href="#"><i class="fa-solid fa-envelope"></i>Contact</a>
+        <a href="#journey-planner"><i class="fa-solid fa-map-location-dot"></i>Planner</a>
+        <a href="#ride-choices"><i class="fa-solid fa-car"></i>Ride</a>
+        <a href="#blog"><i class="fa-solid fa-blog"></i>Blog</a>
+        <a href="#about"><i class="fa-solid fa-user-group"></i>About</a>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a>
       </div>
     </nav>
 
 
+    <div class="hero">
+      <div class="hero1">
+        <h1>Find, Book or Rent a ride &ndash; quickely and easily!</h1>
+        <p>
+          Your Journey, Our Passion
+        </p>
+        <a href="#journey-planner"><button>Plan Journey</button></a>
+      </div>
+      <div class="hero__image">
+        <img src="assets/images/hero.png" alt="hero" />
+      </div>
+    </div>
 
     <!-- Section 1: Journey Planner -->
-    <section>
-      
-    </section>
+    <section id="journey-planner" class="journey-planner">
+      <div class="journey-input">
+          <h1>Plan Your Journey with Saarthi</h1>
+          <form>
+              <div class="input-group">
+                  <input type="text" id="from" placeholder="From">
+                  <input type="text" id="to" placeholder="To">
+              </div>
+              <div class="input-group">
+                  <input type="date" id="date" placeholder="Date">
+                  <input type="time" id="time" placeholder="Time">
+              </div>
+              <button type="submit">Plan My Journey</button>
+          </form>
+      </div>
+  </section>
+
+
+  <section id="ride-choices" class="ride-choices">
+    <h2 class="section-title">Choose Your Ride</h2>
+    <div class="ride-options">
+        <div class="ride-option">
+            <img src="/assets/images/auto.png" alt="Auto">
+            <h3>Auto</h3>
+            <p>Quick and economical for short trips.</p>
+        </div>
+        <div class="ride-option">
+            <img src="/assets/images/bike.png" alt="Bike">
+            <h3>Bike</h3>
+            <p>Zippy and ideal for city rides.</p>
+        </div>
+        <div class="ride-option">
+            <img src="/assets/images/car.png" alt="Car">
+            <h3>Car</h3>
+            <p>Spacious and comfortable for groups.</p>
+        </div>
+    </div>
+</section>
   </body>
 </html>

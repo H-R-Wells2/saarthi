@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+  .navbar-sm{
+    display: flex;
+  }
+  .right {
+    display: none;
+  }
+  .navbar {
+    padding: 10px 20px;
+  }
+}

@@ -21,6 +21,7 @@ body {
   left: 0;
   display: flex;
   width: 100%;
+  z-index: 4;
 }
 
 .navbar > div {
@@ -50,8 +51,33 @@ body {
   transition: color 0.3s;
 }
 
-.navbar a:hover {
-  color: #ff6600;
+.left a {
+  font-size: 2rem;
+  background: linear-gradient(to right, #64e0ff, #8cabff, #ff6600);
+  background-clip: text;
+  -webkit-background-clip: text; /* For better browser compatibility */
+  color: transparent;
+  animation: text 5s ease infinite;
+}
+
+@keyframes text {
+  0%,
+  100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.navbar .right a:hover {
+  color: #ff6600 !important;
+}
+
+.navbar input {
+  display: none;
 }
 
 /* User account icon */
@@ -59,19 +85,65 @@ body {
   cursor: pointer;
   font-size: 20px;
   padding: 5px 7px;
-  color: white;
-  border: 1px solid white;
+  background-color: #fff;
+  color: #512b81;
+  border: 1px solid #512b81;
   border-radius: 50%;
   margin: 0 5px;
+}
+
+.navbar input:checked + .user-options {
+  display: block;
+}
+
+.user-options {
+  display: none;
+  position: absolute;
+  padding: 5px;
+  right: 0;
+  background-color: #512b81;
+  color: white;
+  list-style-type: none;
+  margin: 8rem 2.5rem 0 0;
+  border-radius: 10px;
+  border: 2px solid #ff6600;
+  font-size: 1.1rem;
+  animation: growDown 0.3s ease-in-out;
+  transform-origin: top center;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.user-options li {
+  padding: 2px 6px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.user-options li:hover {
+  color: #8cabff;
 }
 
 /* Navbar for small screen (bottom) */
 .navbar-sm {
   display: none;
+  position: relative;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 4;
 }
 
 .navbar-sm div {
@@ -113,7 +185,7 @@ body {
 
 .hero1 {
   max-width: 50%;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
   padding-left: 4rem;
 }
 
@@ -154,7 +226,7 @@ body {
 /* Section 1: Journey Planner Starts */
 .journey-planner {
   margin-top: 20px;
-  background: url("/assets/images/bg-image.jpeg") fixed;
+  background: url(/assets/images/bg-image2.jpeg) fixed;
   color: #fff;
   text-align: center;
   padding: 10% 0;
@@ -167,22 +239,10 @@ body {
   max-width: 600px;
   margin: 0 auto;
   transition: all 0.4s;
-  animation: slide-in 1s ease-in-out;
 }
 
 .journey-input:hover {
   box-shadow: #8cabff 0px 0px 10px 2px;
-}
-
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 h1 {
@@ -246,6 +306,11 @@ button:hover {
   margin-bottom: 30px;
 }
 
+.section-title i {
+  font-size: 24px;
+  margin: 10px;
+}
+
 .ride-options {
   display: flex;
   justify-content: center;
@@ -253,14 +318,20 @@ button:hover {
   flex-wrap: wrap;
 }
 
+.ride-options input {
+  display: none;
+}
+
 .ride-option {
+  position: relative;
   width: 400px;
   padding: 20px;
   margin: 20px;
-  background: #fff;
+  background: #ffffffca;
   border-radius: 15px;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out;
+  z-index: 1;
 }
 
 .ride-option img {
@@ -283,5 +354,105 @@ button:hover {
 .ride-option:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 6px #ff6600;
+  z-index: 2;
+}
+
+/* Modal of ride option */
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #522b816f;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal > div {
+  position: absolute;
+  width: 40%;
+  background: #d5cedd;
+  border-radius: 20px;
+  padding: 12px 30px;
+  animation: popup 0.5s ease-in-out;
+}
+
+.modal img {
+  width: 40%;
+  height: 40%;
+}
+
+.modal label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  color: #35155d;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.modal h3 {
+  font-size: 1.5rem;
+  margin: 5px 0;
+  color: #ff5722;
+}
+
+.modal p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.modal ul {
+  margin-top: 12px;
+  padding: 5px;
+  padding-left: 25px;
+  list-style-type: disc;
+  text-align: left;
+  border: 2px solid #512b81;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.modal li {
+  margin: 5px 0;
+}
+
+.cta-buttons {
+  display: flex;
+  width: 100%;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+.cta-buttons button {
+  width: 50%;
+}
+
+#auto-modal-checkbox:checked + #auto-modal {
+  display: flex;
+}
+
+#bike-modal-checkbox:checked + #bike-modal {
+  display: flex;
+}
+
+#car-modal-checkbox:checked + #car-modal {
+  display: flex;
 }
 /* Section 2: Ride Options Start */

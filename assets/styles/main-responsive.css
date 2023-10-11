@@ -14,6 +14,19 @@
   .hero1 button {
     font-size: 1.3rem;
   }
+  .modal > div{
+    width: 50%;
+  }
+  .modal img{
+    width: 35%;
+    height: 35%;
+  }
+  .modal h3{
+    font-size: 1.2rem;
+  }
+  .modal p{
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -34,10 +47,22 @@
     margin-right: -120px;
     padding-left: 30px;
   }
+  .journey-planner{
+  background: url(/assets/images/bg-image3.jpeg) fixed;
+  }
   .journey-input {
     max-width: 90%;
   }
   .ride-option {
     width: 90%;
+  }
+  .modal > div{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .modal > div{
+    width: 80%;
   }
 }

@@ -48,7 +48,7 @@
     padding-left: 30px;
   }
   .journey-planner{
-  background: url(/assets/images/bg-image3.jpeg) fixed;
+  background: url(../images/bg-image3.jpeg) fixed;
   }
   .journey-input {
     max-width: 90%;

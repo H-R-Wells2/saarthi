@@ -287,7 +287,7 @@ body {
   padding-left: 0;
   padding-top: 130px;
   align-self: flex-end;
-  background: url("/assets/images/hero-bg.png") center/contain no-repeat;
+  background: url("../images/hero-bg.png") center/contain no-repeat;
 }
 
 .hero__image img {
@@ -298,7 +298,7 @@ body {
 /* Section 1: Journey Planner Starts */
 .journey-planner {
   margin-top: 20px;
-  background: url("/assets/images/bg-image2.jpeg") fixed;
+  background: url("../images/bg-image2.jpeg") fixed;
   color: #fff;
   text-align: center;
   padding: 10% 0;

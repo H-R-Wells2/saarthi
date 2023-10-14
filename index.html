@@ -40,8 +40,12 @@
         </label>
         <input id="user-dropdown" type="checkbox" />
         <ul class="user-options">
-          <li>Profile</li>
-          <li>Log Out</li>
+          <li>Profile <i class="fa-solid fa-user"></i></li>
+          <li>
+            <label for="login-modal-checkbox"
+              >Log In <i class="fa-solid fa-right-to-bracket"></i
+            ></label>
+          </li>
         </ul>
       </div>
     </nav>
@@ -59,6 +63,28 @@
       </div>
     </nav>
 
+    <!-- Login Form -->
+    <input type="checkbox" id="login-modal-checkbox" />
+    <div id="login-modal" class="login-modal">
+      <div>
+        <label class="close-modal" for="login-modal-checkbox"
+          ><i class="fa-solid fa-xmark"></i
+        ></label>
+        <form>
+          <div>
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="Enter Username" />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter Password" />
+          </div>
+        </form>
+        <button>Login</button>
+      </div>
+    </div>
+
+    <!-- Section 0: Hero Section -->
     <div class="hero">
       <div class="hero1">
         <h1>Find, Book or Rent a ride &ndash; quickely and easily!</h1>
@@ -100,13 +126,18 @@
           <h3>Auto</h3>
           <p>Quick and economical for short trips.</p>
         </label>
-        <input type="checkbox" id="auto-modal-checkbox">
+        <input type="checkbox" id="auto-modal-checkbox" />
         <div id="auto-modal" class="modal">
           <div>
-            <label for="auto-modal-checkbox"><i class="fa-solid fa-xmark"></i></label>
+            <label for="auto-modal-checkbox"
+              ><i class="fa-solid fa-xmark"></i
+            ></label>
             <img src="/assets/images/auto.png" alt="auto" />
             <h3>Auto Rickshaw</h3>
-            <p>Ride through the city in a classic Auto Rickshaw. Enjoy the breeze and explore the city like a local.</p>
+            <p>
+              Ride through the city in a classic Auto Rickshaw. Enjoy the breeze
+              and explore the city like a local.
+            </p>
             <ul>
               <li>Perfect for short trips and city sightseeing.</li>
               <li>Open-air experience for a unique journey.</li>
@@ -120,25 +151,40 @@
           </div>
         </div>
 
-
         <!-- Option Bike -->
         <label for="bike-modal-checkbox" class="ride-option">
           <img src="/assets/images/bike.png" alt="Bike" />
           <h3>Bike</h3>
           <p>Zippy and ideal for city rides.</p>
         </label>
-        <input type="checkbox" id="bike-modal-checkbox">
+        <input type="checkbox" id="bike-modal-checkbox" />
         <div id="bike-modal" class="modal">
           <div>
-            <label for="bike-modal-checkbox"><i class="fa-solid fa-xmark"></i></label>
+            <label for="bike-modal-checkbox"
+              ><i class="fa-solid fa-xmark"></i
+            ></label>
             <img src="/assets/images/bike.png" alt="bike" />
             <h3>Bike Ride</h3>
-            <p>Experience the city with the wind in your hair. Our bike rides are perfect for adventurers and explorers.</p>
+            <p>
+              Experience the city with the wind in your hair. Our bike rides are
+              perfect for adventurers and explorers.
+            </p>
             <ul>
-              <li>Enjoy the thrill of riding a motorcycle through the city streets.</li>
-              <li>Small and nimble, perfect for navigating traffic and exploring narrow alleys.</li>
-              <li>Explore the city at your own pace and take scenic detours.</li>
-              <li>Helmet and safety gear provided for a secure and exciting journey.</li>
+              <li>
+                Enjoy the thrill of riding a motorcycle through the city
+                streets.
+              </li>
+              <li>
+                Small and nimble, perfect for navigating traffic and exploring
+                narrow alleys.
+              </li>
+              <li>
+                Explore the city at your own pace and take scenic detours.
+              </li>
+              <li>
+                Helmet and safety gear provided for a secure and exciting
+                journey.
+              </li>
             </ul>
             <div class="cta-buttons">
               <button>Book Now</button>
@@ -153,18 +199,31 @@
           <h3>Car</h3>
           <p>Spacious and comfortable for groups.</p>
         </label>
-        <input type="checkbox" id="car-modal-checkbox">
+        <input type="checkbox" id="car-modal-checkbox" />
         <div id="car-modal" class="modal">
           <div>
-            <label for="car-modal-checkbox"><i class="fa-solid fa-xmark"></i></label>
+            <label for="car-modal-checkbox"
+              ><i class="fa-solid fa-xmark"></i
+            ></label>
             <img src="/assets/images/car.png" alt="car" />
             <h3>Car Service</h3>
-            <p>Travel in comfort and style with our premium car service. Your ride, your rules.</p>
+            <p>
+              Travel in comfort and style with our premium car service. Your
+              ride, your rules.
+            </p>
             <ul>
-              <li>Comfortable and air-conditioned vehicles for a relaxing journey.</li>
-              <li>Professional and courteous drivers to ensure a smooth ride.</li>
-              <li>Flexible pick-up and drop-off locations for your convenience.</li>
-              <li>Various car models to choose from, including sedans and SUVs.</li>
+              <li>
+                Comfortable and air-conditioned vehicles for a relaxing journey.
+              </li>
+              <li>
+                Professional and courteous drivers to ensure a smooth ride.
+              </li>
+              <li>
+                Flexible pick-up and drop-off locations for your convenience.
+              </li>
+              <li>
+                Various car models to choose from, including sedans and SUVs.
+              </li>
             </ul>
             <div class="cta-buttons">
               <button>Book Now</button>

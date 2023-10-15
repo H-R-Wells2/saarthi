@@ -27,6 +27,9 @@
   .modal p {
     font-size: 0.9rem;
   }
+  .right-side-contact{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -62,9 +65,28 @@
   .footer-section {
     width: 50%;
   }
-
   .footer {
     padding-bottom: 5rem;
+  }
+  .right-side-contact {
+    margin: 0;
+    margin-left: 0;
+  }
+  .contact-container {
+    flex-direction: column-reverse;
+  }
+  .left-side-contact {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .left-side-contact::before {
+    display: none;
+  }
+  .right-side-contact {
+    margin-left: 0;
   }
 }
 

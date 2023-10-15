@@ -31,6 +31,7 @@ body {
   align-items: center;
   background-color: #512b81;
   padding: 15px 20px;
+  box-shadow: 0 2px 6px #64e0ff;
 }
 
 .brand-name {
@@ -326,20 +327,20 @@ h1 {
   text-shadow: #fff 1px 1px;
 }
 
-form {
+.journey-planner-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.input-group {
+.journey-planner-form div {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.journey-planner [type="text"],
+.journey-planner input[type="text"],
 input[type="date"],
 input[type="time"] {
   width: 48%;
@@ -371,12 +372,19 @@ button:hover {
 .ride-choices {
   padding: 60px 0;
   text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-title {
-  font-size: 28px;
-  color: #fff;
   margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ff6600;
+  text-shadow: #64e0ff 1px 1px;
 }
 
 .section-title i {
@@ -532,7 +540,100 @@ button:hover {
 #login-modal-checkbox:checked + #login-modal {
   display: flex;
 }
-/* Section 2: Ride Options Start */
+/* Section 2: Ride Options Ends */
+
+/* Section 5: Contact Us Starts */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.contact-container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  background: #512b81;
+  color: white;
+  border-radius: 6px;
+  padding: 40px;
+}
+
+.left-side-contact {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+
+.left-side-contact::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+
+.left-side-contact .details {
+  margin: 14px;
+  text-align: center;
+}
+
+.left-side-contact .details i {
+  font-size: 30px;
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.left-side-contact .details div {
+  margin-bottom: 4px;
+}
+
+.left-side-contact .details p {
+  font-size: 14px;
+  color: #bfbfd2;
+}
+
+.right-side-contact {
+  width: 55%;
+  margin-left: 75px;
+}
+
+.right-side-contact .section-title{
+  text-align: center;
+}
+
+.name-email {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.right-side-contact input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: #64e0ff;
+}
+
+.right-side-contact button {
+  width: 100%;
+  margin: 0;
+}
+/* Section 5: Contact Us Ends */
 
 /* Footer Section Starts */
 .footer {

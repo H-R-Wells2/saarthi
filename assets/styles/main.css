@@ -33,7 +33,7 @@ body {
   padding: 15px 20px;
 }
 
-.left {
+.brand-name {
   flex: 1;
 }
 
@@ -51,11 +51,11 @@ body {
   transition: color 0.3s;
 }
 
-.left a {
+.brand-name a {
   font-size: 2rem;
   background: linear-gradient(to right, #64e0ff, #8cabff, #ff6600);
   background-clip: text;
-  -webkit-background-clip: text; /* For better browser compatibility */
+  -webkit-background-clip: text;
   color: transparent;
   animation: text 5s ease infinite;
 }
@@ -135,11 +135,11 @@ body {
   cursor: pointer;
 }
 
-.user-options i{
+.user-options i {
   margin-left: 6px;
 }
 
-.user-options li:first-child{
+.user-options li:first-child {
   border-bottom: 2px solid #fff;
   padding-bottom: 4px;
   margin-bottom: -2px;
@@ -168,6 +168,7 @@ body {
   margin: 3px;
   width: 100%;
   border-radius: 20px;
+  border: 1px solid #ff6600;
 }
 
 .navbar-sm a {
@@ -219,13 +220,13 @@ body {
   font-size: 1.6rem;
 }
 
-.login-modal button{
+.login-modal button {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-.login-modal input{
+.login-modal input {
   padding: 10px;
   margin: 10px 5px;
   border: none;
@@ -233,13 +234,13 @@ body {
   outline: #64e0ff;
 }
 
-.login-modal form{
+.login-modal form {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
 }
 
-#login-modal-checkbox:checked + .login-modal{
+#login-modal-checkbox:checked + .login-modal {
   display: flex;
 }
 /* Login form ends */
@@ -532,3 +533,68 @@ button:hover {
   display: flex;
 }
 /* Section 2: Ride Options Start */
+
+/* Footer Section Starts */
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #512b81;
+  color: white;
+  padding: 20px;
+}
+
+.footer .brand-name {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-section {
+  width: 30%;
+  padding: 20px;
+  justify-content: center;
+  text-align: left;
+}
+
+.footer-section h2 {
+  margin-bottom: 14px;
+}
+
+.services-list,
+.social-icons {
+  list-style-type: none;
+  padding: 0;
+}
+
+.services-list li,
+.social-icons li a {
+  display: block;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.services-list i,
+.social-icons i {
+  width: 27px;
+  font-size: 20px;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.social-icons li a:hover,
+.services-list li:hover {
+  color: #ff6600;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: auto;
+}
+/* Footer Section Ends */

@@ -27,8 +27,18 @@
   .modal p {
     font-size: 0.9rem;
   }
-  .right-side-contact{
+  .right-side-contact {
     width: 100%;
+  }
+  #about {
+    padding: 20px 30px;
+  }
+  .about-header p {
+    max-width: 80%;
+    font-size: 1.1rem;
+  }
+  .about-card {
+    font-size: 1.05rem;
   }
 }
 
@@ -88,11 +98,42 @@
   .right-side-contact {
     margin-left: 0;
   }
+  .footer-section {
+    width: 70%;
+  }
+  .about-header p {
+    max-width: 100%;
+  }
+  .about-card {
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+  }
+  .about-card:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+  .about-image-container {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+  }
+  .about-card-info {
+    width: 100%;
+  }
+  .about-card-info p{
+    max-width: 90%;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .modal > div {
     width: 80%;
+  }
+  .about-image-container {
+    width: 80%;
+    margin-top: 10px;
+  }
+  .about-card-info p{
+    max-width: 100%;
   }
   .footer-content {
     flex-direction: column;

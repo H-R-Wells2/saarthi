@@ -40,6 +40,13 @@
   .about-card {
     font-size: 1.05rem;
   }
+  .about-image-container {
+    width: 40%;
+  }
+  .extra-info > div {
+    width: 40%;
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -66,6 +73,9 @@
   .journey-input {
     max-width: 90%;
   }
+  .question-container {
+    flex-direction: column;
+  }
   .ride-option {
     width: 90%;
   }
@@ -81,6 +91,9 @@
   .right-side-contact {
     margin: 0;
     margin-left: 0;
+  }
+  .right-side-contact {
+    font-size: 1rem;
   }
   .contact-container {
     flex-direction: column-reverse;
@@ -106,7 +119,6 @@
   }
   .about-card {
     flex-direction: column-reverse;
-    margin-bottom: 40px;
   }
   .about-card:nth-child(2n) {
     flex-direction: column-reverse;
@@ -119,8 +131,16 @@
   .about-card-info {
     width: 100%;
   }
-  .about-card-info p{
+  .about-card-info p {
     max-width: 90%;
+  }
+  .extra-info {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+  .extra-info > div {
+    width: 90%;
+    margin: auto;
   }
 }
 
@@ -132,7 +152,7 @@
     width: 80%;
     margin-top: 10px;
   }
-  .about-card-info p{
+  .about-card-info p {
     max-width: 100%;
   }
   .footer-content {

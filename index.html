@@ -73,18 +73,28 @@
         <form>
           <div>
             <label for="username">Username</label>
-            <input id="username" type="text" placeholder="Enter Username" />
+            <input
+              required
+              id="username"
+              type="text"
+              placeholder="Enter Username"
+            />
           </div>
           <div>
             <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Enter Password" />
+            <input
+              required
+              id="password"
+              type="password"
+              placeholder="Enter Password"
+            />
           </div>
+          <button type="submit">Login</button>
         </form>
-        <button type="submit">Login</button>
       </div>
     </div>
 
-    <!-- Section 0: Hero Section -->
+    <!-- Section 0: Hero Section Starts -->
     <section class="hero">
       <div class="hero1">
         <h1>Find, Book or Rent a ride &ndash; quickely and easily!</h1>
@@ -95,12 +105,19 @@
         <img src="assets/images/hero.png" alt="hero" />
       </div>
     </section>
+    <!-- Section 0: Hero Section Ends -->
 
-    <!-- Section 1: Journey Planner -->
+    <!-- Section 1: Journey Planner Starts -->
     <section id="journey-planner" class="journey-planner">
       <div class="journey-input">
         <h1>Plan Your Journey with Saarthi</h1>
         <form class="journey-planner-form">
+          <p>Where do you want to go?</p>
+          <div class="icon-container">
+            <i class="fa-solid fa-circle"></i>
+            <div class="icon-line"></div>
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
           <div class="input-group">
             <input type="text" id="from" placeholder="From" />
             <input type="text" id="to" placeholder="To" />
@@ -108,13 +125,33 @@
           <div class="input-group">
             <input type="date" id="date" placeholder="Date" />
             <input type="time" id="time" placeholder="Time" />
+            <input
+              type="number"
+              id="travellers"
+              placeholder="No. of travellers"
+              min="1"
+              max="5"
+            />
+          </div>
+          <div class="question-container">
+            <p>Are you traveling with luggage?</p>
+            <div>
+              <label>
+                <input type="radio" name="luggage" value="yes" /> Yes
+              </label>
+              <label>
+                <input type="radio" name="luggage" value="no" checked /> No, I
+                don't have any luggage
+              </label>
+            </div>
           </div>
           <button type="submit">Plan My Journey</button>
         </form>
       </div>
     </section>
+    <!-- Section 1: Journey Planner Ends -->
 
-    <!-- Section 2: Ride Options -->
+    <!-- Section 2: Ride Options Starts -->
     <section id="ride-choices" class="ride-choices">
       <h2 class="section-title">
         Choose Your Ride<i class="fa-solid fa-car-rear"></i>
@@ -231,14 +268,45 @@
             </div>
           </div>
         </div>
+
+        <div class="extra-info">
+          <div class="customer-choice-card">
+            <h3>Customer's Choice</h3>
+            <img
+              src="assets/images/best-choice2.jpg"
+              alt="Customer's Choice Vehicle"
+            />
+            <p>
+              Our customers' top choice is the Saarthi Bike. Whether it's for a
+              quick commute or a leisurely ride, our bike-sharing service has
+              won the hearts of many. With eco-friendly features and easy
+              accessibility, it's no wonder why customers prefer Saarthi Bikes.
+            </p>
+          </div>
+          <div class="customer-choice-card">
+            <h3>Discover Ultimate Comfort</h3>
+            <img
+              src="assets/images/journey-awaits.jpg"
+              alt="Customer's Choice Vehicle"
+            />
+            <p>
+              Saarthi Cars offer unparalleled comfort and style for your
+              journeys. Whether it's a family adventure or a special trip with
+              friends, our cars provide the ultimate travel experience.
+              Experience spacious interiors, luxurious seating, and a smooth,
+              enjoyable ride with Saarthi Cars.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+    <!-- Section 2: Ride Options Ends -->
 
     <!-- <section id="blogs">
       
     </section> -->
 
-    <!-- Section 4: About Section -->
+    <!-- Section 4: About Section Starts -->
     <section id="about">
       <div class="about-header">
         <h2 class="section-title">About us</h2>
@@ -261,7 +329,9 @@
               At Saarthi, we envision a world where transportation is not just a
               means to an end but an experience in itself. We aim to create a
               seamless and hassle-free journey for our users, whether you're
-              commuting to work, meeting friends, or exploring your city.
+              commuting to work, meeting friends, or exploring your city. Our
+              mission is to redefine how people perceive transportation by
+              offering convenience, affordability, and sustainability.
             </p>
           </div>
         </div>
@@ -274,7 +344,11 @@
             <p>
               We are a team of passionate individuals with expertise in
               transportation and technology. Our diverse skills and backgrounds
-              allow us to create innovative and user-friendly solutions.
+              allow us to create innovative and user-friendly solutions. Each
+              member of our team is dedicated to making your journey with
+              Saarthi as smooth and enjoyable as possible. We collaborate,
+              learn, and grow together to continuously improve our services and
+              provide you with the best transportation experience.
             </p>
           </div>
         </div>
@@ -287,18 +361,24 @@
             <div>
               <h4>With Saarthi, you can:</h4>
               <ul>
-                <li>Find the most suitable mode of transportation for your needs.</li>
+                <li>
+                  Find the most suitable mode of transportation for your needs.
+                </li>
                 <li>Book rides quickly and easily.</li>
                 <li>Rent vehicles for a hassle-free experience.</li>
-                <li>Access our informative blog to stay updated on travel trends and tips.</li>
+                <li>
+                  Access our informative blog to stay updated on travel trends
+                  and tips.
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- Section 4: About Section Ends -->
 
-    <!-- Section 5: Contact Us -->
+    <!-- Section 5: Contact Us Section Starts -->
     <section id="contact">
       <div class="contact-container">
         <div class="left-side-contact">
@@ -371,6 +451,7 @@
         </div>
       </div>
     </section>
+    <!-- Section 5: Contact Us Section Ends -->
 
     <!-- Footer -->
     <footer class="footer">

@@ -631,7 +631,6 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 64px 0;
 }
 
 .blog .box {

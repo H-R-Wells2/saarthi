@@ -47,6 +47,12 @@
     width: 40%;
     font-size: 1rem;
   }
+  .blog {
+    font-size: 1rem;
+  }
+  .blog .box {
+    width: 44%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -141,6 +147,9 @@
   .extra-info > div {
     width: 90%;
     margin: auto;
+  }
+  .blog .box {
+    width: 100%;
   }
 }
 

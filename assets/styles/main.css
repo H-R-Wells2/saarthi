@@ -306,6 +306,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 10% 0;
+  min-height: 90vh;
 }
 
 .journey-input {
@@ -428,6 +429,7 @@ button:hover {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #ff6600;
   text-shadow: #64e0ff 1px 1px;
+  text-align: center;
 }
 
 .section-title i {
@@ -616,8 +618,113 @@ button:hover {
 #login-modal-checkbox:checked + #login-modal {
   display: flex;
 }
-
 /* Section 2: Ride Options Ends */
+
+/* Section 3: Blogs Starts */
+.blog {
+  padding: 64px;
+  background-color: #512b81;
+  font-size: 1.05rem;
+}
+
+.blog .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 64px 0;
+}
+
+.blog .box {
+  width: 30%;
+  margin: 20px 0;
+  background-color: #f5f5f5;
+  box-shadow: 0 6px 12px #35155d;
+  border: 0.1px solid #8cabff;
+  border-radius: 12px;
+}
+
+.blog .box-container .box .image {
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px 12px 0 0;
+}
+
+.blog .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog .box img {
+  transition: all 0.2s linear;
+}
+
+.blog .box-container .box:hover .image img {
+  transform: scale(1.1);
+}
+
+.blog .box-container .box .image h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffffca;
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  transition: all 0.2s linear;
+}
+
+.blog .box-container .box .image h3:hover {
+  background-color: #ffc59a;
+}
+
+.blog .box-container .box .image h3 i {
+  color: #ff00f2;
+}
+
+.blog .box-container .box .blog-content {
+  margin: 1.5rem;
+  border-radius: 0 0 12px 12px;
+}
+
+.blog .box-container .box .blog-content h3 {
+  font-size: 23px;
+}
+
+.blog .box-container .box .blog-content p {
+  padding: 1rem 0;
+  text-align: justify;
+  line-height: 1.2;
+  color: #777;
+}
+
+.read-more {
+  display: flex;
+  color: #e64a19;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn {
+  color: #e64a19;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.btn i {
+  margin-left: 2px;
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
+/* Section 3: Blogs Ends */
 
 /* Section 4: About Us Starts */
 #about {
